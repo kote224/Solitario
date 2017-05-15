@@ -10,7 +10,6 @@ public class Carta extends Rectangle{
 	public static final int ROMBOS = 1;
 	public static final int CORAZONES = 2;
 	public static final int TREBOLES = 3;
-	public static final int REVERSO = 4;
 	
 	private Image imagen;
 	private int valor;
@@ -18,20 +17,17 @@ public class Carta extends Rectangle{
 	private int palo;
 
     public Carta(Image img, int v, int c, int p) {
-    	super(200, 200, ANCHURA, ALTURA);
-    	imagen = img;		//Le pasas una imagen y se guarda en IMAGEN
+    	super(-200, -200, ANCHURA, ALTURA);
+    	imagen = img;
 		valor = v;
 		color = c;
 		palo = p;
     }
-    public void actualizar(int posx, int posy){
-    	x=posx-30;
-    	y=posy-30;
-    }
     
     public Image getImagen(){
-    	return imagen;		//devuelves la imagen para poder llamarla desde otro objeto de la clase CARTA 
+    	return imagen;
     }
+   
 
     public int getValor(){
     	return valor;
