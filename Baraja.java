@@ -2,13 +2,12 @@ import java.awt.*;
 import java.applet.*;
 
 public class Baraja{
-	java.util.List<Carta> mazoPrincipal;			//creas una lista de la clase carta
+	java.util.List<Carta> mazoPrincipal;
 
     public Baraja(Image imagenes[]) {
-		mazoPrincipal = new java.util.ArrayList();	//la instancias
+		mazoPrincipal = new java.util.ArrayList();
 		for(int i=0; i<imagenes.length; i++){
 			mazoPrincipal.add(new Carta(imagenes[i], (i%13)+1, ((i/13)==0 || (i/13)==3)?Carta.NEGRO:Carta.ROJO , (i/13)));
-				//metes las imagenes
 		}
     }
 	
@@ -24,8 +23,9 @@ public class Baraja{
 	}
 	
 	public Carta sacar(){
-		Carta auxiliar = mazoPrincipal .get(0);
+		Carta auxiliar=mazoPrincipal.get(0);
 		mazoPrincipal.remove(0);
 		return auxiliar;
 	}
+
 }
